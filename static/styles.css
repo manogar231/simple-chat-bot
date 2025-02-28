@@ -1,0 +1,200 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Centered container for Login & Signup */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Form inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Form Buttons (Login, Signup) */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Signup/Login Links */
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Logout Button in Top-Right Corner */
+#logout-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#logout-btn:hover {
+    background-color: #a71d2a;
+}
+
+/* === Chatbot Styles === */
+
+/* Chat Container - Positioned at Bottom Right */
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    max-height: 500px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Header */
+#chat-header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Chat Messages */
+#chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 400px;
+    background-color: #f9f9f9;
+}
+
+/* User messages */
+#chat-box p.user {
+    background-color: #d1e7dd;
+    text-align: right;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px;
+    width: fit-content;
+    max-width: 80%;
+    align-self: flex-end;
+}
+
+/* Bot messages */
+#chat-box p.bot {
+    background-color: #f8d7da;
+    text-align: left;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px;
+    width: fit-content;
+    max-width: 80%;
+    align-self: flex-start;
+}
+
+/* Chat Input */
+#chat-input {
+    display: flex;
+    align-items: center;  /* Ensures input and button align properly */
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: white;
+}
+
+/* Input Box */
+#chat-input input[type="text"] {
+    flex: 1;  /* Takes up full available space */
+    padding: 12px;  /* Increased padding for better height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 200px;  /* Ensures it's not too small */
+}
+
+/* Chat Send Button (Fix conflict with login/signup buttons) */
+#chat-input button {
+    padding: 12px 15px;
+    margin-left: 10px;  /* Adds space between input and button */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 80px;  /* Ensures button doesn't shrink */
+}
+
+#chat-input button:hover {
+    background-color: #0056b3;
+}
+
+/* === Responsive Design for Mobile === */
+@media (max-width: 600px) {
+    #chat-container {
+        width: 90%; /* Make chatbot width responsive */
+        right: 5%;
+        bottom: 5%;
+    }
+
+    #logout-btn {
+        right: 10px;
+        top: 10px;
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}

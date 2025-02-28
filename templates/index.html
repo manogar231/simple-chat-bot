@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <!-- Logout Button (Top Right Corner) -->
+    <a href="/logout/" id="logout-btn">Logout</a>
+
+    <!-- Chatbot Container -->
+    <div id="chat-container">
+        <div id="chat-header">ChatBot</div>
+        <div id="chat-box"></div>
+        <div id="chat-input">
+            <input type="text" id="message" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
