@@ -5,7 +5,7 @@ This is a simple chatbot application built using FastAPI. It includes user authe
 🚀 Features  
 ✔️ User Signup & Login (Session-based Authentication)  
 ✔️ Secure Password Hashing with **bcrypt**  
-✔️ Simple Chatbot with Predefined Responses  
+✔️ Simple Chatbot with GenAI Integarated  
 ✔️ Frontend with **HTML, CSS, JavaScript (Fetch API)**  
 ✔️ Uses **PostgreSQL / SQLite** for user authentication  
 ✔️ Built with **FastAPI** and **SQLAlchemy**  
@@ -15,7 +15,7 @@ Backend: FastAPI, SQLAlchemy
 Frontend: HTML, CSS, JavaScript  
 Database: PostgreSQL (or SQLite for development)  
 Authentication: Session-based login with hashed passwords  
-Deployment: Works locally & can be deployed on cloud platforms  
+Deployment: Works locally  
 
 📌 Installation  
 
@@ -35,6 +35,8 @@ Create a `.env` file in the project directory and add:
 
 DATABASE_URL=sqlite:///./test.db  # Change to your PostgreSQL URL if needed
 SECRET_KEY=your_secret_key //just a ramdom key (word)
+GOOGLE_API_KEY=<your_GENAI_API_key> you need to add the your api key here
+GOOGLE_Model=gemini-1.5-flash // Change the model accordingly
 
 5️⃣ Create DataBase in SQL or PostgreSQL 
   **You no need to create table at all. 
@@ -60,4 +62,4 @@ The application will be accessible at: **http://127.0.0.1:8000/**
 | GET    | `/login/` | Login Page |
 | POST   | `/login/` | Authenticate User |
 | GET    | `/logout/` | Logout User |
-| POST   | `/chat/` | Chatbot API |
+| POST   | `/chat/` | Chatbot API |   // This api Endpoint is will Works for GenAI too 
